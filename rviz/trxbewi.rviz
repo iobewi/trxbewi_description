@@ -1,0 +1,142 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Help Height: 60
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /Grid1
+        - /LaserScan1
+      Splitter Ratio: 0.5
+    Tree Height: 600
+  - Class: rviz_common/Views
+    Name: Views
+    Splitter Ratio: 0.5
+
+Visualization Manager:
+  Class: ""
+  Enabled: true
+  Name: root
+
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: odom
+    Frame Rate: 30
+
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Alpha: 0.5
+      Cell Size: 1
+      Plane: XY
+      Plane Cell Count: 10
+      Line Style:
+        Value: Lines
+        Line Width: 0.03
+      Color: 160; 160; 164
+
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Visual Enabled: true
+      Collision Enabled: false
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+        History Policy: Keep Last
+        Depth: 5
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+      Links:
+        All Links Enabled: true
+        Expand Link Details: false
+        Expand Joint Details: false
+        Expand Tree: false
+
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Topic:
+        Value: /scan
+        History Policy: Keep Last
+        Depth: 10
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+      Queue Size: 10
+      Style: Points
+      Size (Pixels): 3
+      Size (m): 0.03
+      Decay Time: 0
+      Color Transformer: Intensity
+      Autocompute Intensity Bounds: true
+      Use rainbow: true
+      Min Intensity: 0
+      Max Intensity: 4096
+      Color: 255; 255; 255
+
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+        History Policy: Keep Last
+        Depth: 5
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Value: /goal_pose
+        History Policy: Keep Last
+        Depth: 5
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Value: /clicked_point
+        History Policy: Keep Last
+        Depth: 5
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Target Frame: odom
+      Distance: 3.36
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Pitch: 0.48
+      Yaw: 0.01
+      Near Clip Distance: 0.01
+      Focal Shape Size: 0.05
+      Focal Shape Fixed Size: true
+      Enable Stereo Rendering:
+        Value: false
+
+Window Geometry:
+  Width: 1600
+  Height: 900
+  X: 0
+  Y: 0
+  Hide Left Dock: false
+  Hide Right Dock: false
