@@ -4,3 +4,5 @@ services:
     image: iobewi:trxbewi_description
     security_opt:
       - no-new-privileges:true   # pas --privileged
+    init: true                 # démarre Tini -> forwarding propre des signaux
+    stop_signal: SIGINT        # aligne Docker sur le signal attendu par ROS2
